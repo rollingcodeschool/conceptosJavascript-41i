@@ -18,11 +18,15 @@ switch(opcion){
 */
 // Solicitar al usuario un dia de la semana y ofrecer una opcion de menu completo: plato principal, bebida, postre. (los dias a considerar son lunes, martes, miercoles)
 
-const dia = prompt(
+let dia = prompt(
   "Seleccione un dia de la semana: 1-Lunes, 2-Martes, 3-Miercoles"
 );
 
+dia = dia.toLowerCase();
+
 switch (dia) {
+  case 'lunes':
+  case 'monday':
   case "1":
     document.write("<h2>Menú del lunes</h2>");
     document.write(`<ul>
@@ -32,6 +36,7 @@ switch (dia) {
     </ul>`);
     break;
   case "2":
+  case "martes":
     document.write("<h2>Menú del martes</h2>");
     document.write(`<ul>
         <li>Plato principal: Pastel de papas</li>
@@ -50,3 +55,40 @@ switch (dia) {
 default:
     document.write('<p>Ingreso una opción invalida</p>')
 }
+
+
+// const testDia = prompt(
+//     "Seleccione un dia de la semana: 1-Lunes, 2-Martes, 3-Miercoles"
+//   );
+  
+//   switch (true) {
+//     case testDia === 'lunes' || testDia === 'monday' || testDia ==='1':
+//       document.write("<h2>Menú del lunes</h2>");
+//       document.write(`<ul>
+//           <li>Plato principal: Milanesa con papas</li>
+//           <li>Bebida: Vino</li>
+//           <li>Postre: Flan</li>
+//       </ul>`);
+//       break;
+//     case "2":
+//     case testDia === 'martes'|| testDia ==='tuesday':
+//       document.write("<h2>Menú del martes</h2>");
+//       document.write(`<ul>
+//           <li>Plato principal: Pastel de papas</li>
+//           <li>Bebida: Coca-cola</li>
+//           <li>Postre: Helado </li>
+//       </ul>`);
+//       break;
+//     case "3":
+//       document.write("<h2>Menú del miercoles</h2>");
+//       document.write(`<ul>
+//           <li>Plato principal: ñoquis</li>
+//           <li>Bebida: Jugo</li>
+//           <li>Postre: budin de pan</li>
+//       </ul>`);
+//       break;
+//   default:
+//       document.write('<p>Ingreso una opción invalida</p>')
+//   }
+  
+  
