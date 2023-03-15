@@ -101,9 +101,25 @@ for(let indiceSeries=0; indiceSeries < series.length; indiceSeries++){
 document.write('</ul>')
 
 // buscar si existe un elemento en el arreglo
-document.write(`Existe la serie The last of us: `+ series.includes('The last of us'))
+document.write(`Existe la serie The last of us: `+ series.includes('The last of us'));
+document.write(`<br>Existe la serie the mandalorian: `+ series.includes('the mandalorian'));
+
+//El operador ternario 
+// (condicion logica)? true : false;
+
+let existeSerie =  series.includes('The last of us') ? `si encontramos la serie` : 'No encontramos la serie buscada';
+// let existeSerie =  series.includes('The last of us') ? `si encontramos la serie` : null;
+
+// let existeSerie='';
+// if( series.includes('The last of us')){
+//     existeSerie = `si encontramos la serie`;
+// }else{
+//     existeSerie= 'No encontramos la serie buscada';
+// }
 
 
+document.write(`<br>Existe la serie The last of us: `+ existeSerie);
+document.write(`<br>Existe la serie the mandalorian: `+ (series.includes('the mandalorian') ? `si encontramos la serie` : 'No encontramos la serie buscada'));
 
 
 
