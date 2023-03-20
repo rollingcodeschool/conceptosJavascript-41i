@@ -18,13 +18,28 @@ let productos = [
     "Bálsamo labial",
   ];
 
-  function mostrarSeries(titulo = 'No hay un titulo disponible', arreglo) {
+  function mostrarProductos(titulo = 'No hay un titulo disponible', arreglo) {
     document.write(`<h2>${titulo}</h2>`);
     document.write("<ul>");
-    for (let indiceSeries = 0; indiceSeries < arreglo.length; indiceSeries++) {
-      document.write(`<li>${arreglo[indiceSeries]}</li>`);
-    }
+    // for (let indiceSeries = 0; indiceSeries < arreglo.length; indiceSeries++) {
+    //   document.write(`<li>${arreglo[indiceSeries]}</li>`);
+    // }
+    // forEach alternativa al for tradicional
+    // arreglo.forEach( producto =>{ document.write(`<li>${producto}</li>`);});
+    // map es inmutable
+    arreglo.map(producto=> document.write(`<li>${producto}</li>`));
     document.write("</ul>");
   }
 
-  mostrarSeries('Lista de productos', productos);
+  mostrarProductos('Lista de productos', productos);
+
+  //filtrar todos los protectores solares del array
+  let protectoresSolares = productos.filter(producto => producto.includes('Protector'));
+
+  mostrarProductos('Lista de protectores solares', protectoresSolares);
+
+  //buscar un elemento en arreglo, el primero que cumpla la condicion 
+//   let existeSerum = productos.find( producto => { return producto.includes('Sérum')});
+  let existeSerum = productos.find( producto => producto.includes('Sérum'));
+
+  document.write(`Serum encontrado: ${existeSerum}`)
