@@ -130,5 +130,6 @@ console.log(charizar);
 
 charizar.tirarPokebola();
 pokemonCharmander.mostrarInformacion();
+charizar.color ='azul'
 charizar.mostrarInformacion();
 charizar.mostrarDatosExtras();
